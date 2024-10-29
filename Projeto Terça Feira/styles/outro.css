@@ -1,0 +1,233 @@
+.segundoMenu {
+    padding-bottom: 15px;
+    margin-top: 93px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    background-color: #fff9ea;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    border-bottom: 2px solid #ffe092;
+}
+
+.segundoMenu a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    font-size: 18px;
+    transition: color 0.3s; /* Animação para suavizar a mudança de cor */
+}
+
+.segundoMenu a:hover {
+    color: #e9a209; /* Cor alterada ao passar o mouse */
+}
+
+.filtro {
+    margin-top: 20px;
+    width: 200px;
+}
+
+.filtro a, .categorias a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s; /* Animação suave ao passar o mouse */
+}
+
+.filtro a:hover, .categorias a:hover {
+    color: #e9a209; /* Cor ao passar o mouse nas categorias */
+}
+
+#maisvendidos, .maisvendidos p {
+    border: 1px solid black;
+}
+
+.maisvendidos p {
+    border-color: grey;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.filtro h3, .categorias h3, .filtroborda h3 {
+    padding-bottom: 15px;
+}
+
+.categorias h3, .filtroborda h3 {
+    padding-top: 15px;
+}
+
+.categorias ul li, .filtroborda ul li {
+    list-style: none;
+    color: black;
+    padding-bottom: 10px;
+    transition: transform 0.3s, color 0.3s; /* Animação ao passar o mouse */
+}
+
+.categorias ul li:hover, .filtroborda ul li:hover {
+    color: #e9a209; /* Mudança de cor ao passar o mouse */
+    transform: translateX(5px); /* Leve deslocamento para a direita ao passar o mouse */
+}
+
+.todosfiltros {
+    padding-right: 150px;
+    float: left;
+    display: flex;
+}
+
+.catalogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito de aumentar e sombra suave */
+}
+
+.catalogo:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.2); /* Aumento da sombra */
+}
+
+.catalogo img {
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s; /* Animação suave na imagem */
+}
+
+.catalogo img:hover {
+    transform: scale(1.1); /* Leve aumento da imagem ao passar o mouse */
+}
+
+.catalogo-estrela {
+    padding-bottom: 10px;
+}
+
+.botao-compra {
+    background-color: #ffe092;
+    color: #000000;
+    border: none; 
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animação suave no hover */
+    margin-right: 110px;
+}
+
+.botao-compra:hover {
+    background-color: #e9a209; /* Cor de destaque ao passar o mouse */
+    color: #fff;
+    transform: scale(1.05); /* Leve aumento do botão */
+}
+
+.catalogo-parcela {
+    color: #434343;
+}
+
+.catalogo-estrela i {
+    color: #e9a209;
+}
+
+
+/*siteeeeeeeee index*/  
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#dishhes {
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 12px;
+    width: 30%; /* Ajustei a largura para 30%, permitindo 3 por linha */
+    padding: 15px;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dish img {
+    max-width: 60%; /* Mantive o tamanho aumentado das imagens */
+    height: auto;
+    object-fit: cover;
+}
+
+.dish-heart {
+    position: absolute;
+    background-color: var(--color-primary-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+    color: var(--color-primary-1);
+    width: 70px;
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.dish-description {
+    color: #434343;
+    text-align: center;
+}
+
+.dish-rate i {
+    color: var(--color-primary-6);
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1590px) {
+    #dishhes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dish {
+        width: calc(33.33% - 16px); /* Ajustei para garantir 3 por linha */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dish {
+        width: 100%;
+    }
+
+    #menu .section-subtitle {
+        text-align: center;
+    }
+}
